@@ -1,0 +1,13 @@
+# SQL Server backup files
+*.bak
+
+# Temporary files
+*.tmp
+*.log
+
+# Power BI temporary files
+*.pbitmp
+
+# Windows system files
+.DS_Store
+Thumbs.db
