@@ -1,20 +1,20 @@
-# AdventureWorks Sales Analytics SQL Project
+# AdventureWorks Sales Analytics Dashboard
 
 ## Overview
 
-This is a SQL-based business analytics project using the AdventureWorksDW2022 data warehouse.
-The current stage focuses on data exploration, cleaned reporting views, and business KPI analysis. The project will later be extended into a Power BI dashboard.
+This is a business analytics portfolio project using the AdventureWorksDW2022 data warehouse.
+
+The project demonstrates a full workflow from SQL data exploration and reporting-view preparation to Power BI dashboard development. The current version includes three SQL scripts and an initial Power BI dashboard.
 
 ## Business Questions
 
-This project explores:
+This project analyzes:
 
 * Overall sales, cost, profit, and order performance
 * Internet Sales vs Reseller Sales
-* Monthly and yearly sales trends
+* Monthly sales trends by channel
 * Product category and product-level performance
-* Sales territory performance
-* Internet Sales customer segments
+* Sales territory and regional performance
 
 ## Dataset
 
@@ -22,7 +22,7 @@ The project uses the Microsoft AdventureWorksDW2022 sample data warehouse.
 
 The raw `.bak` database file is not included in this repository and should be downloaded separately from Microsoft’s official AdventureWorks sample database resources.
 
-Main tables used:
+Main tables used include:
 
 * `FactInternetSales`
 * `FactResellerSales`
@@ -36,6 +36,8 @@ Main tables used:
 
 * SQL Server
 * SQL Server Management Studio
+* Power BI Desktop
+* DAX
 * Git
 * GitHub
 
@@ -49,11 +51,14 @@ adventureworks-sales-dashboard/
 │   ├── 02_create_clean_views.sql
 │   └── 03_business_kpis.sql
 │
+├── powerBI/
+│   └── AdventureWorks_Sales_Dashboard.pbix
+│
 ├── README.md
 └── .gitignore
 ```
 
-## SQL Files
+## SQL Workflow
 
 ### `01_data_exploration.sql`
 
@@ -86,26 +91,88 @@ Calculates business KPIs including:
 
 It also analyzes performance by sales channel, product category, territory, and customer segment.
 
+## Power BI Dashboard
+
+The initial Power BI dashboard has been created using the cleaned SQL views.
+
+Current report pages:
+
+1. **Executive Overview**
+
+   * KPI cards for sales, profit, margin, orders, and average order value
+   * Monthly sales trend by channel
+   * Sales by channel
+   * Product category and top product overview
+
+2. **Product Performance**
+
+   * Sales by product category
+   * Sales by product subcategory
+   * Top products by sales
+   * Gross profit margin by product category
+
+3. **Region & Channel Analysis**
+
+   * Sales by territory group
+   * Sales by country
+   * Channel performance by region
+   * Gross profit margin by country
+
+## Dashboard Screenshots
+
+### Executive Overview
+
+![Executive Overview](images/executive_overview.png)
+
+### Product Performance
+
+![Product Performance](images/product_performance.png)
+
+### Region & Channel Analysis
+
+![Region & Channel Analysis](images/region_channel_analysis.png)
+
+## DAX Measures
+
+Core DAX measures created include:
+
+* Total Sales
+* Total Cost
+* Gross Profit
+* Gross Profit Margin
+* Total Quantity Sold
+* Total Order Lines
+* Total Orders
+* Average Order Value
+
 ## Current Status
 
 Completed:
 
 * SQL data exploration
-* Cleaned SQL views
+* Cleaned SQL reporting views
 * SQL-based business KPI analysis
+* Power BI data model
+* Core DAX measures
+* Initial Power BI dashboard
 * GitHub repository setup
+* Refine dashboard layout and formatting
+* Export dashboard screenshots
+* Add screenshots to the README
 
-Next step:
 
-* Connect the cleaned SQL views to Power BI and build an interactive dashboard.
+Next steps:
+
+* Write final business insights summary
 
 ## Skills Demonstrated
 
 * SQL data exploration
 * Data cleaning and transformation
-* SQL joins
-* View creation
-* Fact and dimension table understanding
+* SQL joins and view creation
+* Fact and dimension table modeling
 * Business KPI analysis
-* Sales channel, product, territory, and customer segment analysis
-* GitHub documentation
+* Power BI data modeling
+* DAX measure creation
+* Sales, product, channel, and territory analysis
+* GitHub project documentation
