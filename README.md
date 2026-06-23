@@ -122,15 +122,15 @@ Current report pages:
 
 ### Executive Overview
 
-![Executive Overview](images/executive_overview.png)
+![Executive Overview](image/executive_overview.png)
 
 ### Product Performance
 
-![Product Performance](images/product_performance.png)
+![Product Performance](image/product_performance.png)
 
 ### Region & Channel Analysis
 
-![Region & Channel Analysis](images/region_channel_analysis.png)
+![Region & Channel Analysis](image/region_channel_analysis.png)
 
 ## DAX Measures
 
